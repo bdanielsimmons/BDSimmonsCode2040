@@ -7,7 +7,7 @@ r = requests.post("http://challenge.code2040.org/api/register", json = dict)
 
 dict = {'token': TOKEN} #Step 2 (Reset the token)
 string = requests.post("http://challenge.code2040.org/api/reverse", dict)
-reverseString = string.text[::-1] #Slices through the strin backwards and posts to API
+reverseString = string.text[::-1] #Slices through the string backwards and posts to API
 myKey = {'token': TOKEN, 'string': reverseString}
 string = requests.post("http://challenge.code2040.org/api/reverse/validate", myKey)
 
